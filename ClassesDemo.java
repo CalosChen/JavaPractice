@@ -1,4 +1,11 @@
-public class Animal{
+/**
+ * IAnimal
+ */
+interface IAnimal {
+
+    public void name();
+}
+class Animal{
     public String cate;
     public String getCate(){
         return cate;
@@ -7,13 +14,18 @@ public class Animal{
         cate=value;
     }
 }
-public class Puppy extends Animal{
+class Puppy extends Animal implements IAnimal{
     public Puppy() {
         super();
-        super.cate="dog";
+        this.cate="puppy";
+
     }
-    public  String toString(){
+    public String toString(){
         System.out.println(getCate());
+        return getCate();
+    }
+    public void name() {
+        System.out.println(this.getCate());
     }
 }
 
@@ -22,9 +34,10 @@ public class Puppy extends Animal{
  */
 public class ClassesDemo {
 
-    public static void main(String args) {
+    public static void main(String[] args) {
         Puppy apuppy=new Puppy();
         String cate=apuppy.getCate();
         System.out.println(cate);
+        apuppy.name();
     }
 }
