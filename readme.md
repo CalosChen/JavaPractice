@@ -1,0 +1,1 @@
+# progress of : [java basis](http://www.runoob.com/java/java-inheritance.html)
