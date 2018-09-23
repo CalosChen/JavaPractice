@@ -6,7 +6,7 @@ interface IAnimal {
     public void name();
 }
 class Animal{
-    public String cate;
+    protected String cate;
     public String getCate(){
         return cate;
     }
@@ -17,7 +17,7 @@ class Animal{
 class Puppy extends Animal implements IAnimal{
     public Puppy() {
         super();
-        this.cate="puppy";
+        super.cate="puppy";
 
     }
     public String toString(){
